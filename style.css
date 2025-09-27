@@ -1,0 +1,345 @@
+body {
+    font-family: 'Georgia', serif;
+    color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+
+/* Vintage Color Scheme */
+
+ :root {
+    --primary-color: #6c757d;
+    /* Grey */
+    --secondary-color: #343a40;
+    /* Dark Grey */
+    --accent-color: #d4a373;
+    /* Vintage accent */
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+
+/* Navigation */
+
+.navbar {
+    border-bottom: 3px solid var(--accent-color);
+    font-family: 'Times New Roman', serif;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Hero Section */
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/vintage-kitchen-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Values Section */
+
+.values-section {
+    background-color: white;
+}
+
+.values-section .card {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.values-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.values-section i {
+    color: var(--accent-color);
+}
+
+
+/* Catalogue Section */
+
+.catalogue-section .card {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.catalogue-section .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.catalogue-section .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Testimonials */
+
+.testimonials-section {
+    background-color: var(--light-color);
+}
+
+.testimonials-section .card {
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0;
+}
+
+
+/* Newsletter */
+
+.newsletter-section .btn {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+
+/* Footer */
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+
+/* Buttons */
+
+.btn {
+    border-radius: 0;
+    padding: 10px 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--dark-color);
+}
+
+.btn-outline-dark {
+    border: 2px solid var(--dark-color);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+    .hero-section img {
+        margin-top: 30px;
+    }
+}
+
+
+/* Add these to your existing CSS */
+
+
+/* Animation Classes */
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Specific Animation Styles */
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.8s ease forwards;
+}
+
+.slide-left {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+.zoom-in {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.rotate-in {
+    animation: rotateIn 1s ease forwards;
+}
+
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+
+/* Animation Delays */
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+
+/* Hero Section Animation */
+
+.hero-section h1 {
+    animation: slideUp 1s ease forwards 0.2s;
+    opacity: 0;
+}
+
+.hero-section p {
+    animation: slideUp 1s ease forwards 0.4s;
+    opacity: 0;
+}
+
+.hero-section .btn {
+    animation: slideUp 1s ease forwards 0.6s;
+    opacity: 0;
+}
+
+.hero-section img {
+    animation: zoomIn 1s ease forwards 0.8s;
+    opacity: 0;
+}
+
+
+/* Hover Effects */
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
